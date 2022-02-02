@@ -149,7 +149,7 @@ section {
 .button-table td a:hover {
   color: var(--dark-color);
 }
-.first-button {
+.right-margin-button {
   margin-right: 1em;
 }
 
@@ -340,7 +340,13 @@ section {
 /* Contact block */
 #contact {
   padding-top: 15%;
+  padding-bottom: 15%;
 }
+#contact p a {
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
 
 
 

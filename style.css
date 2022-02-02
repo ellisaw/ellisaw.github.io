@@ -340,15 +340,59 @@ section {
 /* Contact block */
 #contact {
   padding-top: 15%;
-  padding-bottom: 15%;
+
+}
+#contact .container {
+  padding: 5em;
+}
+
+p.css-bubble {
+	position: relative;
+	width: 50%;
+	line-height: 1.4em;
+	background-color: var(--light-color);
+  border: solid var(--dark-color);
+	border-top-width: 4px;
+  border-bottom-width: 8px;
+  border-left-width: 4px;
+  border-right-width: 6px;
+	border-radius: 15px 30px;
+	padding: 20px;
+}
+p.css-bubble:before,
+p.css-bubble:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+p.speech:before {
+	left: 80%;
+	bottom: -50px;
+	border: 25px solid;
+	border-color: var(--dark-color) transparent transparent var(--dark-color);
+}
+p.speech:after {
+	left: 81.8%;
+	bottom: -30px;
+	border: 15px solid;
+	border-color: var(--light-color) transparent transparent var(--light-color);
 }
 #contact p a {
   color: var(--dark-color);
   font-weight: bold;
 }
-
-
-
+@media screen and (max-width: 1200px) {
+  p.css-bubble {
+    width: 80%;
+  }
+  #contact .button-table {
+    margin-top: 5em;
+  }
+  #contact {
+    padding: 2em 0;
+  }
+}
 
 .self-doodle {
   width: 95%;

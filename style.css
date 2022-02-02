@@ -1,0 +1,357 @@
+/* Global Styles */
+:root {
+  --dark-color: #111344;
+  --light-color: #fff3e6;
+  --light-color-transparent: #fff3e600;
+  --accent-color: #ceb0ff;
+  --accent-color-transparent: #ceb0ff00;
+  --red-circle: #ea4335;
+  --yellow-circle: #fbbc05;
+  --green-circle: #34a853;
+  --border-radius: 4px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Nunito', sans-serif;
+}
+body {
+  background-color: var(--light-color);
+}
+
+/* Buttons */
+.wide-padding {
+  padding: 0.5em 2.5em 0.5em 2.5em;
+}
+.narrow-padding {
+  padding: 0.5em 0em 0.5em 0em;
+}
+.button {
+  border: 3px solid var(--dark-color);
+  border-radius: 50px;
+  background-image: linear-gradient(to right, var(--light-color) 50%, var(--accent-color) 50%);
+  background-position: 0;
+  background-size: 205% ;
+  transition: 0.2s;
+  max-width: 225px;
+  text-align: center;
+}
+.button:hover {
+  background-position: -95% 0;
+}
+.button-link {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+.button-link:hover {
+  color: var(--dark-color);
+}
+.not-live {
+  background-image: linear-gradient(to right, var(--light-color) 50%, var(--light-color) 50%);
+}
+.not-live:hover {
+  cursor: default;
+}
+.not-live .default-text {
+  transition: 0.8s;
+}
+.not-live .hover-text {
+  display: none;
+  transition: 0.8s;
+}
+.not-live:hover .hover-text {
+  display: block;
+}
+.not-live:hover .default-text {
+  display: none;
+}
+/* Navigation Bar */
+nav {
+  padding: 1rem 2rem 0rem 2rem;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  z-index: 2;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+}
+nav li {
+  float: left;
+  position: relative;
+}
+nav li a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em;
+  color: #000;
+  color: var(--dark-color);
+}
+nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  width: 90%;
+  height: 0.1em;
+  background-color: var(--dark-color);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  font-weight: 600;
+}
+nav li a:hover {
+  color: var(--dark-color);
+}
+nav li a:hover::after, a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+/* Content */
+section {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding-bottom: 4em;
+}
+
+/* Home / Intro block */
+#home {
+  background-color: var(--light-color);
+  padding-top: 10%;
+}
+#home h1 span {
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--light-color) 50%, var(--accent-color) 50%);
+  background-position: 0;
+  background-size: 200% ;
+  transition: 0.5s;
+}
+#home h1 span:hover {
+  background-position: -100% 0;
+  background-color: var(--accent-color);
+  transition-duration: 0.3s;
+}
+
+.button-table {
+  margin-top: 2em;
+}
+.button-table td a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--dark-color);
+}
+.button-table td a:hover {
+  color: var(--dark-color);
+}
+.first-button {
+  margin-right: 1em;
+}
+
+/* About block */
+#about {
+  padding-top: 8%;
+}
+#about p {
+}
+#about-bubble {
+  width: 10vw;
+  margin-bottom: 1em;
+}
+#about-content {
+  padding-right: 5%;
+}
+.hobbies {
+  width: 75%;
+}
+.hobbies-resize {
+  width: 65%;
+}
+
+/* Projects block */
+#projects {
+  padding-top: 8%;
+}
+.projects-list {
+  padding-left: 0;
+}
+.project-window {
+  border-radius: var(--border-radius);
+  display: block;
+  float: left;
+  border: 3px solid var(--dark-color);
+  margin-right: 2%;
+  margin-bottom: 1em;
+  width: 48%;
+  aspect-ratio: 3/2;
+  display: flex;
+  flex-flow: column;
+  transition: 0.3s;
+}
+.project-window:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+.menu-bar {
+  height: 1.5em;
+  border-bottom: 3px solid var(--dark-color);
+  background-image: linear-gradient(to right, var(--light-color) 50%, var(--accent-color) 50%);
+  background-position: 0;
+  background-size: 200% ;
+  transition: 0.5s;
+  border-radius: var(--border-radius) var(--border-radius)0px 0px;
+}
+.project-window:hover .menu-bar {
+  background-position: -100% 0;
+  background-color: var(--accent-color);
+  transition-duration: 0.3s;
+}
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin: 5px 2px 0px 2px;
+}
+.red-circle {
+  background-color: var(--red-circle);
+}
+.yellow-circle {
+  background-color: var(--yellow-circle);
+}
+.green-circle {
+  background-color: var(--green-circle);
+}
+.content-area {
+  height: 100%;
+  flex-grow : 1;
+  padding: 0.5em;
+}
+.content-area .text{
+  height: 70%;
+  text-align: center;
+  transition: 0.3s;
+}
+.content-area .text h4{
+  height: 70%;
+  text-align: center;
+  padding-top: 20%;
+  margin-bottom: -1%;
+}
+.content-area .buttons {
+  width: 100%;
+  height: 30%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.content-area .buttons .button {
+  width: 48%;
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.project-window:hover .content-area .buttons{
+  opacity: 1;
+}
+.project-window:hover .content-area {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.project-window:hover .text {
+  opacity: 0;
+  cursor: default;
+}
+#project-1:hover .content-area{
+  background-image: linear-gradient(to bottom, var(--accent-color-transparent), var(--accent-color)), url("project-1-bg.png");
+}
+#project-2:hover .content-area{
+  background-image: linear-gradient(to bottom, var(--accent-color-transparent), var(--accent-color)), url("project-2-bg.png");
+}
+#project-3:hover .content-area{
+  background-image: linear-gradient(to bottom, var(--accent-color-transparent), var(--accent-color)), url("project-3-bg.png");
+}
+#jobs {
+  margin-top: 0;
+}
+#jobs .bubble{
+  width: 35%;
+  margin-top: 2em;
+}
+.timeline-container {
+  height: 60%;
+}
+.timeline::before {
+  content: "";
+  width: 0.1em;
+  height: 100%;
+  background-color: var(--dark-color);
+  left: 2.5em;
+  position: absolute;
+}
+.timeline {
+  position: relative;
+}
+.timeline td {
+  vertical-align: top;
+}
+.hover-box .bullet {
+  text-align: center;
+  width: 5em;
+  padding-left: 1px;
+  transition: 0.3s;
+}
+.hover-box .bullet h1 {
+  line-height: 0.75em;
+}
+.hover-box:hover .bullet {
+  transform: scale(1.2);
+  padding-top: 1em;
+}
+.hover-box-content {
+  transition: 0.3s;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+.hover-box:hover .hover-box-content {
+  transform: translate(20px, 0px);
+}
+.hover-box-content .title{
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--light-color) 50%, var(--accent-color) 50%);
+  background-position: 0;
+  background-size: 200% ;
+  transition: 0.5s;
+}
+.hover-box:hover .hover-box-content .title{
+  background-position: -100% 0;
+  background-color: var(--accent-color);
+  transition-duration: 0.3s;
+}
+
+/* Contact block */
+#contact {
+  padding-top: 15%;
+}
+
+
+
+.self-doodle {
+  width: 95%;
+  height: auto;
+}
+.bubble-div {
+  width: 100%;
+}
+.bubble {
+  width: 15vw;
+  height: auto;
+}

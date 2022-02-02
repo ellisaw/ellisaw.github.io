@@ -125,6 +125,11 @@ section {
   background-color: var(--light-color);
   padding-top: 10%;
 }
+@media screen and (max-width: 1000px) {
+  #home {
+    padding-top: 20%;
+  }
+}
 #home h1 span {
   text-decoration: none;
   background-image: linear-gradient(to right, var(--light-color) 50%, var(--accent-color) 50%);

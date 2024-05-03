@@ -142,9 +142,6 @@ section {
     padding-top: 20%;
   }
 }
-h1 {
-  font-size
-}
 #home h1 span {
   text-decoration: none;
   background-image: linear-gradient(to right, var(--light-color) 50%, var(--accent-color) 50%);

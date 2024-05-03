@@ -19,6 +19,12 @@
 body {
   background-color: var(--light-color);
 }
+h1 {
+  font-size: calc(1.3rem + 3.3vw);
+}
+h2 {
+  font-size: calc(1rem + .9vw);
+}
 
 /* Buttons */
 .wide-padding {
@@ -135,6 +141,9 @@ section {
   #home {
     padding-top: 20%;
   }
+}
+h1 {
+  font-size
 }
 #home h1 span {
   text-decoration: none;
